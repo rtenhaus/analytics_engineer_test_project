@@ -1,0 +1,19 @@
+config:
+  send_anonymous_usage_stats: false
+sm_test_project:
+  target: default
+  outputs:
+    prod:
+      dataset: masterset_test_project
+      keyfile: ./service_account.json
+      location: US
+      method: service-account
+      priority: interactive
+      project: customers-managed
+      threads: 6
+      timeout_seconds: 600
+      type: bigquery
+
+
+
+
