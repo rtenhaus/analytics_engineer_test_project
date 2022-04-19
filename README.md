@@ -1,15 +1,4 @@
-Welcome to your new dbt project!
+## Source Medium Test Project
 
-### Using the starter project
+See setup instructions [here](https://sourcemedium.notion.site/Analytics-Engineer-Test-Project-f52d7c6442b7483fa0e67407631c3145)
 
-Try running the following commands:
-- dbt run
-- dbt test
-
-
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
