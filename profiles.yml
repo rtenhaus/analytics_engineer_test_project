@@ -3,7 +3,7 @@ config:
 sm_test_project:
   target: default
   outputs:
-    prod:
+    default:
       dataset: masterset_test_project
       keyfile: ./service_account.json
       location: US
@@ -13,7 +13,4 @@ sm_test_project:
       threads: 6
       timeout_seconds: 600
       type: bigquery
-
-
-
 
