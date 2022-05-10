@@ -1,0 +1,30 @@
+version: 2
+
+
+models: 
+  - name: dim_daily_metrics
+    description: Subcription and subcriber metrics aggregated at a daily level
+    columns:
+    - name: date
+      description: Metric date and primary key for the table
+      tests:
+        - unique
+        - not_null 
+    - name: subscriptions_new
+      description: The count of new subscriptions created
+    - name: subscriptions_returning
+      description: The count of new subscriptions created by customers following a subscription cancellation
+    - name: subscriptions_cancelled
+      description: The count of subscriptions cancelled (excludes "max number of charge attemmpts")
+    - name: subscriptions_active
+      description: The count of open subscriptions
+    - name: subscriptions_churned
+      description: The count of closed subscriptions
+    - name: subscribers_new
+      description: The distinct count of customers creating their first subscription 
+    - name: subscribers_cancelled
+      description: The distinct count of customers who cancelled their subscription
+    - name: subscribers_active
+      description: The distinct count of customers who have one or more open subscriptions
+    - name: subscribers_churned
+      description: The distinct count of customers who no longer have an open subscription
