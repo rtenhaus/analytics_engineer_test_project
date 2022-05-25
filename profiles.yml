@@ -4,13 +4,18 @@ sm_test_project:
   target: default
   outputs:
     default:
-      dataset: "{{ env_var('OUTPUT_DATASET') }}"
-      keyfile: ./service_account.json
-      location: US
-      method: service-account
-      priority: interactive
-      project: wise-weaver-282922
-      threads: 6
-      timeout_seconds: 600
+      # dataset: "{{ env_var('OUTPUT_DATASET') }}"
+      # keyfile: ./service_account.json
+      # location: US
+      # method: service-account
+      # priority: interactive
+      # project: wise-weaver-282922
+      # threads: 6
+      # timeout_seconds: 600
+      # type: bigquery
       type: bigquery
-
+      method: oauth
+      threads: 6
+      timeout_seconds: 3600
+      schema: masterset_joe
+      project: wise-weaver-282922
