@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: fct_cancellations
+    description: "Fact Model containing all cancellations (including implied cancelations)"
+    columns:
+      - name: cancelled_at
+        description: "Timestamp of subscription cancellation (EST)"
+      - name: cancelled_date
+        description: "Date of subscription_cancellation (EST)"
+      - name: customer_id
+        description: "Customer ID"
+        tests:
+          - not_null
+      - name: action
+        description: "Suscription Cancelled in this table"
+      - name: id
+        description: "Subscription ID"
+        tests:
+          - not_null
+          - unique
+      - name: customer_subscription_number
+        description: Sequential number of created order tied to this cancellation.
+

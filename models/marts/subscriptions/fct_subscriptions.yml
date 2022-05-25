@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: fct_subscriptions
+    description: "Fact Model containing all subscriptions"
+    columns:
+      - name: created_at
+        description: "Timestamp of subscription creation (EST)"
+      - name: created_date
+        description: "Date of subscription creation (EST)"
+      - name: customer_id
+        description: "Customer ID"
+        tests:
+          - not_null
+      - name: action
+        description: "Suscription created in this table"
+      - name: id
+        description: "Subscription ID"
+        tests:
+          - not_null
+          - unique
+      - name: customer_subscription_number
+        description: Sequential number of customer's order.
