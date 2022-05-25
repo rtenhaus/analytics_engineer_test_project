@@ -1,0 +1,23 @@
+version: 2
+
+macros:
+  - name: quarter
+    description: "Returns 1/2/3/4Q depending on the input month"
+    arguments:
+      - name: month_num
+        type: column name or expression
+        description: "The name of a column, or an expression equating to month numbers [1-12]"
+
+  - name: month_name
+    description: "Returns January, February, etc depending on the input month"
+    arguments:
+      - name: month_num
+        type: column name or expression
+        description: "The name of a column, or an expression equating to month numbers [1-12]"
+
+  - name: weekday_name
+    description: "Returns Sunday, Monday, etc depending on the input weekday_num"
+    arguments:
+      - name: weekday_num
+        type: column name or expression
+        description: "The name of a column, or an expression equating to month numbers [1-7]"
