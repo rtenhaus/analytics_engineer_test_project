@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: stg_recharge_subscriptions
+    description: Staged model for recharge subscriptions
+    columns:
+      - name: id
+        description: "Unique subscription ID (primary key)"
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: "Customer ID"
+        tests:
+          - not_null
+      - name: created_at_et
+        description: "Timestamp subscription was created (EST)"
+      - name: cancelled_at_et
+        description: "Timestamp subscription was cancelled (EST)"
+      - name: status
+        description: "Subscription status"
+      - name: cancellation_reason
+        description: "Cancellation reason provided by customer"
