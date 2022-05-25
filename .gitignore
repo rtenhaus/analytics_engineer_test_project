@@ -5,3 +5,5 @@ logs/
 
 venv/
 .DS_Store
+
+target/
