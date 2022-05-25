@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: recharge
+    database: wise-weaver-282922
+    schema: raw_data_sandbox
+
+    tables:
+      - name: subscriptions
+        identifier: acme1_recharge_subscriptions
+        description: Subscriptions table from Recharge
+
+
