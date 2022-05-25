@@ -13,15 +13,24 @@ models:
         description: "Customer ID"
         tests:
           - not_null
-      - name: created_at_et
+      - name: created_at
         description: "Timestamp subscription was created (EST)"
       - name: created_date
         description: "Date subscription was created"
-      - name: cancelled_at_et
+      - name: cancelled_at
         description: "Timestamp subscription was cancelled (EST)"
       - name: cancelled_date
         descriptions: "Date subscription was cancelled"
       - name: status
         description: "Subscription status"
+        tests:
+          - accepted_values:
+              values: ['CANCELLED','ACTIVE']
+              config:
+               severity: warn  # Warn if we get an unexpected value
       - name: cancellation_reason
         description: "Cancellation reason provided by customer"
+      - name: is_valid_cancellation
+        description: "Boolean indicating whether subscription should count against cancellations"
+      - name: customer_subscription_number
+        description: "Sequential count of subscriptions ordered by creation timestamp"
