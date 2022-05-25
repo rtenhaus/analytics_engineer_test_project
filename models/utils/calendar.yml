@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: calendar
+    description: Utility calendar table
+    columns:
+      - name: date
+        description: "Calendar date"
+        tests:
+          - unique
+          - not_null
+      - name: year
+        description: "Calendar year (YYYY)"
+      - name: month
+        description: "Calendar month (1-12)"
+      - name: week
+        description: "Calendar week (0-53).  Week begins on Sunday; dates prior to first Sunday of the year are week 0."
+      - name: day
+        description: "Calendar day (1-31)"
+      - name: day_of_year
+        description: "Nth day of the year (beginning January 1st)"
+      - name: day_of_week
+        description: "Nth day of the week (beginning on Sunday)"
+      - name: quarter
+        description: "String of NQ, where N between 1-4 (Jan-Mar -> 1Q, Apr-Jun -> 2Q, Jul-Sep -> 3Q, Oct-Dec -> 4Q"
+      - name: month_name
+        description: "Month Name (January, February, etc)"
+      - name: weekday_name
+        description: "Weekday Name (Sunday, Monday, etc)"
+
