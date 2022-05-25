@@ -18,7 +18,9 @@ with source as (
         
         -- Timestamps
         , safe_cast(created_at as timestamp) as created_at_et
+        , safe_cast(created_at as date) as created_date
         , safe_cast(cancelled_at as timestamp) as cancelled_at_et
+        , safe_cast(cancelled_at as date) as cancelled_date
 
         -- Needed Fields
         , safe_cast(status as string) as status

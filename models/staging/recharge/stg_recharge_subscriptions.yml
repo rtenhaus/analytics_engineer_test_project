@@ -15,8 +15,12 @@ models:
           - not_null
       - name: created_at_et
         description: "Timestamp subscription was created (EST)"
+      - name: created_date
+        description: "Date subscription was created"
       - name: cancelled_at_et
         description: "Timestamp subscription was cancelled (EST)"
+      - name: cancelled_date
+        descriptions: "Date subscription was cancelled"
       - name: status
         description: "Subscription status"
       - name: cancellation_reason
